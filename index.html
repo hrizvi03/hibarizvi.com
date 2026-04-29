@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiba Rizvi — Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #8A1946;
+            --ink: #ffffff;
+            --ink-soft: #f7f7f7;
+            --ink-faint: #e290c6;
+            --accent: #ff22b2;
+            --rule: rgb(74, 8, 8);
+
+            --font: "Helvetica Neue", Helvetica, sans-serif;
+            --urdu: 'Noto Nastaliq Urdu', serif;
+
+            --maxw: 1400px;
+            --gutter: clamp(1rem, 3vw, 2rem);
+            /* slightly tighter */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--font);
+            line-height: 1.4;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.65;
+        }
+
+        /* ---------- INTRO ---------- */
+        .intro {
+            padding: 6rem var(--gutter) 3rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) clamp(220px, 28%, 340px);
+            gap: 3rem;
+        }
+
+        .intro h1 {
+            font-weight: 400;
+            font-size: clamp(2rem, 5.5vw, 4.75rem);
+            line-height: 1.08;
+            letter-spacing: -0.015em;
+            max-width: 30ch;
+            /* KEY FIX */
+        }
+
+        .urdu-inline {
+            font-family: var(--urdu);
+            font-size: 0.85em;
+            margin: 0 0.15em;
+        }
+
+        .intro-links {
+            margin-top: 1.5rem;
+            font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+        }
+
+        .intro-affiliations {
+            margin-top: 2rem;
+            font-size: 0.82rem;
+            color: var(--ink-soft);
+        }
+
+        /* ---------- WORK ---------- */
+        .work {
+            padding: 5rem var(--gutter) 8rem;
+            max-width: var(--maxw);
+            margin: 3rem auto 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem 3rem;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+            background: #e5e1d6;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* GOOGLE SLIDES FIX */
+        .project-image iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            transform: scale(1.15);
+            /* reduced zoom */
+            transform-origin: center;
+        }
+
+        .placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+        }
+
+        .ph-1 {
+            background: #4a6670;
+        }
+
+        .ph-2 {
+            background: #c4933f;
+        }
+
+        .ph-3 {
+            background: #8a6680;
+        }
+
+        .ph-4 {
+            background: #6a8a5a;
+        }
+
+        .ph-5 {
+            background: #7a7a9a;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .project h3 {
+            font-weight: 400;
+            font-size: 1.15rem;
+        }
+
+        .project-tag {
+            font-size: 0.78rem;
+            color: var(--ink-soft);
+        }
+
+        .project p {
+            font-size: 0.92rem;
+            color: var(--ink-soft);
+        }
+
+        footer {
+            border-top: 1px solid var(--rule);
+            padding: 2.5rem var(--gutter);
+            max-width: var(--maxw);
+            margin: 0 auto;
+            font-size: 0.82rem;
+            color: var(--ink-soft);
+        }
+
+        @media (max-width: 720px) {
+            .intro {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="intro">
+        <div>
+            <h1>
+                Hiba Rizvi <span class="urdu-inline">ہبہ رضوی</span> is a software
+                engineer, researcher, designer, and AI enthusiast passionate about making creative
+                solutions to difficult problems.
+            </h1>
+
+            <p class="intro-links">
+                <a href="mailto:hiba.rizvi.swe@gmail.com">Email</a>,
+                <a href="https://www.linkedin.com/in/hibarizvi1">LinkedIn</a>,
+                <a href="https://github.com/hrizvi03">GitHub</a>
+            </p>
+
+            <p class="intro-affiliations">
+                Languages: HTML5, CSS3, JavaScript, Python, Java, SQL <br>
+                Frameworks: React, Node, FastAPI, REST APIs <br>
+                Tools: Git, Docker, Linux, VS Code, IntelliJ <br>
+                Other: Canva, GenAI Development (Cursor, OpenAI, Anthropic, Gemini), Figma, Interactive Web
+                Applications,
+                Slack, Google Workspace, Adobe Creative Suite, Microsoft Office, WordPress, AWS, Azure, Sketch, Project
+                Management,
+                LaTeX, Product Development, Functional Prototyping, UI/UX Design, AI/ML fundamentals, CI/CD, Version
+                Control
+            </p>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="projects">
+
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="aei.png" alt="AEI Telehealth Clinic">
+                </div>
+                <div class="project-meta">
+                    <h3>Defying Healthcare Scarcity</h3><span class="project-tag">Healthcare</span>
+                </div>
+                <p>A system walkthrough and web design of a telehealth startup focused in Iraq and Pakistan.</p>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="gk.png" alt="Gulistan-e-Khadijah Sindh">
+                </div>
+                <div class="project-meta">
+                    <h3>First Generation Education in Under-Served Communities</h3><span
+                        class="project-tag">Education</span>
+                </div>
+                <p>A web design for an education startup providing free American-level education to communities
+                    globally.</p>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://embed.figma.com/proto/wtT6xpQNWy4ebXhWuHgcE8/Ladylike.?node-id=0-1322&embed-host=share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="project-meta">
+                    <h3>Female Health and Wellness App</h3><span class="project-tag">Wellness</span>
+                </div>
+                <p>Female health app re-imagined to reduce cognitive load.</p>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://embed.figma.com/proto/MAMbURGGkLir0pfi0PqkAf/Bazme-Adaab?node-id=2902-723&starting-point-node-id=2902%3A723&embed-host=share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="project-meta">
+                    <h3>Urdu Linguistic and Literacy Tool</h3><span class="project-tag">Linguistics</span>
+                </div>
+                <p>Reduction of linguistic atrophy through a web app.</p>
+            </div>
+
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="tempus.png" alt="Tempus AI Sales Prototype">
+                </div>
+                <div class="project-meta">
+                    <h3>Cancer Research Workflow Prototype</h3><span class="project-tag">Research</span>
+                </div>
+                <p>An AI copilot tool prototype to reduce the data insight gap for Tempus Sales representatives.</p>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="edtech.png" alt="Hackathon Web App Project" object-fit:cover;>
+                </div>
+                <div class="project-meta">
+                    <h3>Curriculum Reforming Tool</h3><span class="project-tag">Education</span>
+                </div>
+                <p>An AI prototype built to provide teachers a platform to practice their curriculum and receive
+                    feedback.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        Hiba Rizvi © 2026
+    </footer>
+
+</body>
+
+</html>
